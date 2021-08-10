@@ -31,22 +31,19 @@ function timer(){
 
         // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
-        // questa soluzione non è corretta così compara solo se numero e posizione sono identici(da rivedere!)
-        if  (comparaArray(arrayNumGiocatore, myArrayNumeri) == true) {
-            console.log("hai vinto");
-        }  else {
-            console.log("hai perso");
+        let indovinati = [];
+        for (let i = 0; i < arrayNumGiocatore.length; i++)
+        {
+            let numeroGiocatore = arrayNumGiocatore[i];
+            if (myArrayNumeri.includes(numeroGiocatore))
+            indovinati.push(numeroGiocatore);
         }
-
-       
+        alert('Hai indovinato ' + indovinati.length + ' numeri');
+        alert('Inumeri sono: ' + indovinati);
     
     }
     secondi--;
 }
-
-
-
-
 
 
 
